@@ -7,8 +7,13 @@
         <script src='bower_components/angular/angular.js'></script>
         <script src='bower_components/angular-resource/angular-resource.js'></script>
         <script src='js/app.js'></script>
+        <script src='js/toDoListController.js'></script>
     </head>
-    <body>
-        Hello World
+    <body ng-controller='toDoController as listCtrl'>
+        <form class ="adding">
+            <input type="text" ng-model="listCtrl.toDoItem">
+            <button class="butn" ng-model='listCtrl.addItem()'>Add</button>
+        </form>
+
     </body>
 </html>
