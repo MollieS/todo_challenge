@@ -29,4 +29,11 @@ describe('To Do List', function() {
         element(by.css('.editable-buttons button')).click()
         expect(listItems.get(0).getText()).toBe('add tests more');
     });
+    
+    it('can tick items off', function() {
+        itemField.sendKeys('add tests');
+        addButton.click();
+        element(by.className('done')).click();
+        expect(element(by.className('done')).isSelected()).toBeTruthy();
+    });
 });
