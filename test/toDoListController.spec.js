@@ -7,6 +7,10 @@ describe('toDoController', function() {
         ctrl = $controller('toDoController');
     }));
 
+    beforeEach(function() {
+        angular.module("xeditable", []);
+    });
+
     it('initialises with an empty list', function(){
         expect(ctrl.list).toBeUndefined();
     });
@@ -24,4 +28,5 @@ describe('toDoController', function() {
         ctrl.addItem();
         expect(ctrl.list).toEqual(['write more tests', 'write even more tests']);
     });
+
 });

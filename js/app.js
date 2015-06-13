@@ -1,1 +1,1 @@
-var toDo = angular.module('toDo', ['ngResource']);
+var toDo = angular.module('toDo', ['ngResource', 'xeditable']);

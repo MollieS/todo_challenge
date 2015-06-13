@@ -20,4 +20,13 @@ describe('To Do List', function() {
         expect(listItems.get(0).getText()).toBe('add more tests');
         expect(listItems.get(1).getText()).toBe('add protractor tests');
     });
+
+    it('can edit items in the list', function() {
+        itemField.sendKeys('add tests');
+        addButton.click();
+        element(by.className('items')).click();
+        element(by.model('$data')).sendKeys(' more')
+        element(by.css('.editable-buttons button')).click()
+        expect(listItems.get(0).getText()).toBe('add tests more');
+    });
 });
