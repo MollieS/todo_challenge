@@ -14,6 +14,14 @@ describe('toDoController', function() {
     it('adding an item to the list', function() {
         ctrl.toDoItem = 'write more tests';
         ctrl.addItem();
-        expect(ctrl.list).toEqual('write more tests');
+        expect(ctrl.list).toEqual(['write more tests']);
+    });
+
+    it('can add two items to the list', function() {
+        ctrl.toDoItem = 'write more tests';
+        ctrl.addItem();
+        ctrl.toDoItem = 'write even more tests';
+        ctrl.addItem();
+        expect(ctrl.list).toEqual(['write more tests', 'write even more tests']);
     });
 });

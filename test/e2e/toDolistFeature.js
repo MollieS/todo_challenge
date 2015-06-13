@@ -1,7 +1,7 @@
 describe('To Do List', function() {
-    var itemField = element(by.model('toDoItem'));
+    var itemField = element(by.model('listCtrl.toDoItem'));
     var addButton = element(by.className('butn'));
-    var listDisplay = element(by.model('list'));
+    var listDisplay = element(by.model('listCtrl.list'));
 
     beforeEach(function(){
         browser.get('http://localhost:8080');
@@ -14,6 +14,8 @@ describe('To Do List', function() {
     it('displays the list', function() {
         itemField.sendKeys('add more tests');
         addButton.click();
-        expect(listDisplay).toEqual('add more tests');
+        itemField.sendKeys('add protractor tests');
+        addButton.click();
+        expect(listDisplay.getText()).toBe('add more tests add protactor tests');
     });
 });
