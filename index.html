@@ -1,24 +1,26 @@
 <!doctype html>
 <html lang='en' ng-app='toDo'>
-    <head>
-        <meta charset='utf-8'>
-        <title>To Do List</title>
-        <script src='bower_components/jquery/dist/jquery.js'></script>
-        <script src='bower_components/angular/angular.js'></script>
-        <script src='bower_components/angular-resource/angular-resource.js'></script>
-        <script src='bower_components/angular-xeditable/dist/js/xeditable.js'></script>
-        <script src='js/app.js'></script>
-        <script src='js/toDoListController.js'></script>
-    </head>
-    <body ng-controller='toDoController as listCtrl'>
-        <ul ng-model="listCtrl.list" ng-repeat="item in listCtrl.list">
-            <a href='#'class='items' editable-text='item'>{{item}}</a>
-            <input type='checkbox' class="done">
-        </ul>
-        <form class ="adding">
-            <input type="text" ng-model="listCtrl.toDoItem">
-            <button class="butn" type='reset'  ng-click='listCtrl.addItem()'>Add</button>
-        </form>
 
-    </body>
+<head>
+    <meta charset='utf-8'>
+    <title>To Do List</title>
+    <script src='bower_components/jquery/dist/jquery.js'></script>
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='bower_components/angular-resource/angular-resource.js'></script>
+    <script src='bower_components/angular-xeditable/dist/js/xeditable.js'></script>
+    <script src='js/app.js'></script>
+    <script src='js/toDoListController.js'></script>
+</head>
+
+<body ng-controller='toDoController as listCtrl'>
+    <ul ng-model="listCtrl.list" ng-repeat="item in listCtrl.list">
+        <a href='#' class='items' editable-text='item'>{{item}}</a>
+        <input type='checkbox' class="done">
+    </ul>
+    <form class="adding">
+        <input type="text" ng-model="listCtrl.toDoItem">
+        <button class="butn" type='reset' ng-click='listCtrl.addItem()'>Add</button>
+    </form>
+</body>
+
 </html>
