@@ -10,9 +10,12 @@
         <script src='js/toDoListController.js'></script>
     </head>
     <body ng-controller='toDoController as listCtrl'>
+        <ul>
+            <li>{{listCtrl.list}}</li>
+        </ul>
         <form class ="adding">
             <input type="text" ng-model="listCtrl.toDoItem">
-            <button class="butn" ng-model='listCtrl.addItem()'>Add</button>
+            <button class="butn" ng-click='listCtrl.addItem()'>Add</button>
         </form>
 
     </body>

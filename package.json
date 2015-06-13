@@ -25,5 +25,8 @@
     "karma-requirejs": "^0.2.2",
     "phantomjs": "^1.9.17",
     "requirejs": "^2.1.18"
+  },
+  "dependencies": {
+    "http-server": "^0.8.0"
   }
 }
