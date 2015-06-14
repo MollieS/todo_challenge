@@ -13,8 +13,9 @@
 </head>
 
 <body ng-controller='toDoController as listCtrl'>
+    <h1>To Do List</h1>
     <ul ng-model="listCtrl.list" ng-repeat="item in listCtrl.list">
-        <a href='#' class='items' editable-text='item'>{{item}}</a>
+        <a href='#' class='items' editable-text='item'>{{item.task}}</a>
         <input type='checkbox' class="done">
     </ul>
     <form class="adding">

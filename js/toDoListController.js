@@ -5,7 +5,13 @@ toDo.controller('toDoController', [function() {
     if (self.list === undefined) {
       self.list = [];
     }
-    self.list.push(self.toDoItem)
+    var item = {completed: false, task: self.toDoItem}
+    self.list.push(item)
   };
+
+  self.completeItem = function() {
+      self.list[0].completed = true
+      
+  }
 
 }]);
