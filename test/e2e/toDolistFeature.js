@@ -36,4 +36,14 @@ describe('To Do List', function() {
     element(by.className('done')).click();
     expect(element(by.className('done')).isSelected()).toBeTruthy();
   });
+
+  it('can filter items', function(){
+    itemField.sendKeys('add filter');
+    addButton.click();
+    itemField.sendKeys('filter');
+    addButton.click()
+    element(by.className('done')).click();
+    element(by.className('completed')).click();
+    expect(listItems).toBe('filter')
+  });
 });

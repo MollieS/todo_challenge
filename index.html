@@ -4,6 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <title>To Do List</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src='bower_components/jquery/dist/jquery.js'></script>
     <script src='bower_components/angular/angular.js'></script>
     <script src='bower_components/angular-resource/angular-resource.js'></script>
@@ -14,10 +15,13 @@
 
 <body ng-controller='toDoController as listCtrl'>
     <h1>To Do List</h1>
-    <ul ng-model="listCtrl.list" ng-repeat="item in listCtrl.list">
-        <a href='#' class='items' editable-text='item.task'>{{item.task}}</a>
-        <input type='checkbox' class="done" ng-click="listCtrl.completeItem(item.task)">
-    </ul>
+    <button class='completed' ng-click="listFilter = {completed: true}">Completed</button>
+    <list id="filtered">
+        <ul ng-model="listCtrl.list" ng-repeat="item in listCtrl.list | filter:listFilter">
+            <a href='#' class='items' editable-text='item.task'>{{item.task}}</a>
+            <input type='checkbox' class="done" ng-click="listCtrl.completeItem(item.task)">
+        </ul>
+    </list>
     <form class="adding">
         <input type="text" ng-model="listCtrl.toDoItem">
         <button class="butn" type='reset' ng-click='listCtrl.addItem()'>Add</button>
