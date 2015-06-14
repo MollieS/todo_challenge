@@ -37,13 +37,23 @@ describe('To Do List', function() {
     expect(element(by.className('done')).isSelected()).toBeTruthy();
   });
 
-  it('can filter items', function(){
+  it('can filter items by completed', function() {
     itemField.sendKeys('add filter');
     addButton.click();
     itemField.sendKeys('filter');
     addButton.click()
     element(by.className('done')).click();
     element(by.className('completed')).click();
+    expect(listItems).toBe('filter')
+  });
+
+  it('can filter by active', function() {
+    itemField.sendKeys('add filter');
+    addButton.click();
+    itemField.sendKeys('filter');
+    addButton.click()
+    element(by.className('done')).click();
+    element(by.className('active')).click();
     expect(listItems).toBe('filter')
   });
 });
