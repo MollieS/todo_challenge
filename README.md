@@ -47,13 +47,13 @@ So I never see them again
 * A user is able to edit items in the To Do list
 * A user can check items off the list
 * A user can filter items in the list by completed tasks or active tasks
+* A user can see a count of the items on the list
 
 ## Future Tasks
 
 * Refactor controller functions into services
 * DRY out tests
 * Add function to remove items
-* Add function to count items
 * Add persistence with a database
 * Add CSS & styling
 
@@ -66,3 +66,5 @@ So I never see them again
 
 * written in Javascript/Angularjs
 * tested with jasmine and protractor
+* tests can be run with npm test for all karma/jasmine tests
+* protractor test/e2e/conf.js will run protractor tests
