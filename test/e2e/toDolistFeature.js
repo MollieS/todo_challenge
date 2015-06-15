@@ -44,7 +44,7 @@ describe('To Do List', function() {
     addButton.click()
     element(by.className('done')).click();
     element(by.className('completed')).click();
-    expect(listItems).toBe('filter')
+    expect(listItems.get(0).getText()).toBe('add filter')
   });
 
   it('can filter by active', function() {
@@ -54,6 +54,12 @@ describe('To Do List', function() {
     addButton.click()
     element(by.className('done')).click();
     element(by.className('active')).click();
-    expect(listItems).toBe('filter')
+    expect(listItems.get(0).getText()).toBe('filter')
+  });
+
+  xgit('can see a count of items', function(){
+    itemField.sendKeys('add count');
+    addButton.click();
+    expect(element(by.className('counter'))).toContain('1')
   });
 });
