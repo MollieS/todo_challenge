@@ -20,8 +20,4 @@ toDo.controller('toDoController', [function() {
     }
   }
 
-  self.countItems = function(){
-    self.list.length
-  }
-
 }]);

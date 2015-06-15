@@ -57,7 +57,7 @@ describe('To Do List', function() {
     expect(listItems.get(0).getText()).toBe('filter')
   });
 
-  xgit('can see a count of items', function(){
+  xgit('can see a count of items', function() {
     itemField.sendKeys('add count');
     addButton.click();
     expect(element(by.className('counter'))).toContain('1')

@@ -17,7 +17,7 @@
     <h1>To Do List</h1>
     <button class='completed' ng-click="listFilter = {completed: true}">Completed</button>
     <button class='active' ng-click="listFilter = {completed: false}">Active</button>
-     <p class="counter">Task Count: {{listCtrl.list.length}}</p>
+    <p class="counter">Task Count: {{listCtrl.list.length}}</p>
     <list id="filtered">
         <ul ng-model="listCtrl.list" ng-repeat="item in listCtrl.list | filter:listFilter">
             <a href='#' class='items' editable-text='item.task'>{{item.task}}</a>

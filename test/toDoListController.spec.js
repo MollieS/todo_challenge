@@ -20,23 +20,23 @@ describe('toDoController', function() {
   });
 
   it('adding an item to the list', function() {
-      addTask('write more tests');
+    addTask('write more tests');
     expect(ctrl.list[0].task).toEqual('write more tests');
   });
 
   it('can add two items to the list', function() {
-     addTask('write more tests');
+    addTask('write more tests');
     addTask('write better tests');
     expect(ctrl.list.length).toEqual(2);
   });
 
   it('can mark a task as completed', function() {
-      addTask('complete tasks')
-      ctrl.completeItem('complete tasks');
-      expect(ctrl.list[0].completed).toBe(true);
-      });
+    addTask('complete tasks')
+    ctrl.completeItem('complete tasks');
+    expect(ctrl.list[0].completed).toBe(true);
+  });
 
-  it('can mark the correct task as completed', function(){
+  it('can mark the correct task as completed', function() {
     addTask('complete tasks');
     addTask('add tests');
     ctrl.completeItem('add tests');
