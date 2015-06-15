@@ -63,3 +63,13 @@ So I never see them again
 * Create a persistance layer (e.g. MongoDB), or use LocalStorage or the filesystem through Node
 * Make it look purdy (CSS) - try a framework like Bootstrap or Foundation
 
+## How to run
+
+* bower install & npm install will download all dependecies
+* npm start will start up the http-server and serve the page on localhost:8080
+
+## Languages
+
+* written in Javascript/Angularjs
+* tested with jasmine and protractor
+
