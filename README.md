@@ -46,20 +46,23 @@ So I never see them again
 * A user is able to add items to the To Do list
 * A user is able to edit items in the To Do list
 * A user can check items off the list
+* A user can filter items in the list by completed tasks or active tasks
 
-## To do
+## Future Tasks
 
 * Refactor controller functions into services
 * DRY out tests
-* Add filtering functionality
 * Add function to remove items
-* Add count
+* Add function to count items
 * Add persistence with a database
 * Add CSS & styling
 
-## Extensions
+## How to run
 
-* Deploy the app
-* Create a persistance layer (e.g. MongoDB), or use LocalStorage or the filesystem through Node
-* Make it look purdy (CSS) - try a framework like Bootstrap or Foundation
+* bower install & npm install will download all dependecies
+* npm start will start up the http-server and serve the page on localhost:8080
 
+## Languages
+
+* written in Javascript/Angularjs
+* tested with jasmine and protractor
