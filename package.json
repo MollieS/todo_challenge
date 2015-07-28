@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "bower": "^1.4.1",
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "webdriver-manager": "^7.0.1"
   }
 }
