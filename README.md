@@ -1,7 +1,5 @@
 # Todo Challenge
 
-![Build Status](https://travis-ci.org/MollieS/todo_challenge.svg?branch=master)
-
 
 ## Challenge
 
